@@ -1,0 +1,128 @@
+[
+  {
+    "getMaterial": "pine",
+    "FirstName": "Joshua",
+    "LastName": "Donaldson",
+    "Date": "2022-10-04T15:55:45.9945025-06:00",
+    "Shipping": 3,
+    "NumDesks": 1,
+    "QuoteId": 82450,
+    "maxWidth": 96.0,
+    "minWidth": 24.0,
+    "maxDepth": 48.0,
+    "minDepth": 12.0,
+    "minHeight": 30.0,
+    "Desk": {
+      "NumDrawers": 2,
+      "Material": "pine",
+      "Height": 25.0,
+      "Width": 25.0,
+      "Depth": 25.0
+    }
+  },
+  {
+    "getMaterial": "pine",
+    "FirstName": "Joshua",
+    "LastName": "Donaldson",
+    "Date": "2022-10-04T15:56:17.4945598-06:00",
+    "Shipping": 3,
+    "NumDesks": 1,
+    "QuoteId": 28216,
+    "maxWidth": 96.0,
+    "minWidth": 24.0,
+    "maxDepth": 48.0,
+    "minDepth": 12.0,
+    "minHeight": 30.0,
+    "Desk": {
+      "NumDrawers": 2,
+      "Material": "pine",
+      "Height": 26.0,
+      "Width": 26.0,
+      "Depth": 26.0
+    }
+  },
+  {
+    "getMaterial": "pine",
+    "FirstName": "Joshua",
+    "LastName": "Donaldson",
+    "Date": "2022-10-04T16:15:25.4625269-06:00",
+    "Shipping": 3,
+    "NumDesks": 1,
+    "QuoteId": 34111,
+    "maxWidth": 96.0,
+    "minWidth": 24.0,
+    "maxDepth": 48.0,
+    "minDepth": 12.0,
+    "minHeight": 30.0,
+    "Desk": {
+      "NumDrawers": 2,
+      "Material": "pine",
+      "Height": 25.0,
+      "Width": 25.0,
+      "Depth": 25.0
+    }
+  },
+  {
+    "getMaterial": "pine",
+    "FirstName": "Joshua",
+    "LastName": "Donaldson",
+    "Date": "2022-10-04T16:17:48.2801374-06:00",
+    "Shipping": 7,
+    "NumDesks": 1,
+    "QuoteId": 45487,
+    "maxWidth": 96.0,
+    "minWidth": 24.0,
+    "maxDepth": 48.0,
+    "minDepth": 12.0,
+    "minHeight": 30.0,
+    "Desk": {
+      "NumDrawers": 2,
+      "Material": "pine",
+      "Height": 25.0,
+      "Width": 25.0,
+      "Depth": 25.0
+    }
+  },
+  {
+    "getMaterial": "pine",
+    "FirstName": "Joshua",
+    "LastName": "Donaldson",
+    "Date": "2022-10-05T20:13:16.2422456-06:00",
+    "Shipping": 3,
+    "NumDesks": 1,
+    "QuoteId": 84260,
+    "maxWidth": 96.0,
+    "minWidth": 24.0,
+    "maxDepth": 48.0,
+    "minDepth": 12.0,
+    "minHeight": 30.0,
+    "Desk": {
+      "NumDrawers": 2,
+      "Material": "pine",
+      "Height": 25.0,
+      "Width": 25.0,
+      "Depth": 25.0
+    }
+  },
+  {
+    "getMaterial": "pine",
+    "FirstName": "joshua",
+    "LastName": "donaldson",
+    "Date": "2022-10-05T20:16:53.1985458-06:00",
+    "Shipping": 3,
+    "NumDesks": 1,
+    "QuoteId": 46061,
+    "maxWidth": 96.0,
+    "minWidth": 24.0,
+    "maxDepth": 48.0,
+    "minDepth": 12.0,
+    "minHeight": 30.0,
+    "Desk": {
+      "NumDrawers": 2,
+      "Material": "pine",
+      "Height": 25.0,
+      "Width": 25.0,
+      "Depth": 25.0
+    }
+  }
+]
