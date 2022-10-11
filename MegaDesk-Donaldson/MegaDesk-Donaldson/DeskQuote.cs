@@ -46,7 +46,7 @@ namespace MegaDesk_Donaldson
             { 7, new Dictionary<String, int>() } };
             
 
-public DeskQuote()
+        public DeskQuote()
         {
             this.desk = new Desk();
             quoteId = random.Next(10000,100000);
@@ -69,7 +69,6 @@ public DeskQuote()
 
             }
         }
-
 
         public void createDesks(int desks)
         {

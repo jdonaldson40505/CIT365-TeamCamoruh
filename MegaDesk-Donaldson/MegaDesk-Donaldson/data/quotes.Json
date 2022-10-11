@@ -124,5 +124,26 @@
       "Width": 25.0,
       "Depth": 25.0
     }
+  },
+  {
+    "getMaterial": "rosewood",
+    "FirstName": "Conor",
+    "LastName": "McShane",
+    "Date": "2022-10-11T12:55:52.9907729-06:00",
+    "Shipping": 3,
+    "NumDesks": 7,
+    "QuoteId": 79968,
+    "maxWidth": 96.0,
+    "minWidth": 24.0,
+    "maxDepth": 48.0,
+    "minDepth": 12.0,
+    "minHeight": 30.0,
+    "Desk": {
+      "NumDrawers": 7,
+      "Material": "rosewood",
+      "Height": 400.0,
+      "Width": 95.0,
+      "Depth": 9000.0
+    }
   }
 ]

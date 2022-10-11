@@ -20,8 +20,6 @@ namespace MegaDesk_Donaldson
             InitializeComponent();
         }
 
-        
-
         private void mainMenuButton_Click_1(object sender, EventArgs e)
         {
             Form form = (MainMenu)Tag;
