@@ -120,6 +120,26 @@ namespace MegaDesk_Donaldson
                 }
             }
         }
+        private void depthInput_KeyUp(object sender, KeyEventArgs e)
+        {
+            String errorMsg = "Please Input a valid number between 12-48";
+            try
+            {
+                if ((float.Parse(depthInput.Text) < 12 || float.Parse(depthInput.Text) > 48) && depthInput.Text.Length > 1)
+                {
+                    this.AddQuoteErrorProvider.SetError(depthInput, errorMsg);
+                    depthInput.Select(0, depthInput.Text.Length);
+                }
+                else
+                {
+                    errorMsg = "";
+                    this.AddQuoteErrorProvider.SetError(depthInput, errorMsg);
+                    updateTotal();
+                }
+
+            }
+            catch { }
+        }
 
         private void ShippingInput_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -164,5 +184,6 @@ namespace MegaDesk_Donaldson
                 //intentionally blank
             }
         }
+
     }
 }

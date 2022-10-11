@@ -167,6 +167,7 @@
             this.depthInput.Size = new System.Drawing.Size(100, 26);
             this.depthInput.TabIndex = 11;
             this.depthInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.depthInput_KeyPress);
+            this.depthInput.KeyUp += new System.Windows.Forms.KeyEventHandler(this.depthInput_KeyUp);
             // 
             // DepthInputLabel
             // 
