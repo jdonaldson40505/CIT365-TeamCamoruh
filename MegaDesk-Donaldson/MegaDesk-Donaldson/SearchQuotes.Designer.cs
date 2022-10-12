@@ -31,11 +31,11 @@
             this.backMainMenu = new System.Windows.Forms.Button();
             this.searchButton = new System.Windows.Forms.Button();
             this.searchGridView = new System.Windows.Forms.DataGridView();
-            this.searchComboBoxLabel = new System.Windows.Forms.Label();
-            this.searchComboBox = new System.Windows.Forms.ComboBox();
             this.FirstNameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastNameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.searchComboBoxLabel = new System.Windows.Forms.Label();
+            this.searchComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.searchGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,31 +75,6 @@
             this.searchGridView.Size = new System.Drawing.Size(657, 286);
             this.searchGridView.TabIndex = 18;
             // 
-            // searchComboBoxLabel
-            // 
-            this.searchComboBoxLabel.AutoSize = true;
-            this.searchComboBoxLabel.Location = new System.Drawing.Point(62, 101);
-            this.searchComboBoxLabel.Name = "searchComboBoxLabel";
-            this.searchComboBoxLabel.Size = new System.Drawing.Size(99, 13);
-            this.searchComboBoxLabel.TabIndex = 19;
-            this.searchComboBoxLabel.Text = "Search By Material:";
-            // 
-            // searchComboBox
-            // 
-            this.searchComboBox.BackColor = System.Drawing.Color.White;
-            this.searchComboBox.FormattingEnabled = true;
-            this.searchComboBox.Items.AddRange(new object[] {
-            "Oak",
-            "Laminate",
-            "Pine",
-            "Rosewood",
-            "Veneer"});
-            this.searchComboBox.Location = new System.Drawing.Point(167, 98);
-            this.searchComboBox.Name = "searchComboBox";
-            this.searchComboBox.Size = new System.Drawing.Size(171, 21);
-            this.searchComboBox.TabIndex = 20;
-            this.searchComboBox.Text = "Select Material";
-            // 
             // FirstNameCol
             // 
             this.FirstNameCol.HeaderText = "First Name";
@@ -115,6 +90,32 @@
             this.TotalCol.HeaderText = "Total";
             this.TotalCol.Name = "TotalCol";
             // 
+            // searchComboBoxLabel
+            // 
+            this.searchComboBoxLabel.AutoSize = true;
+            this.searchComboBoxLabel.Location = new System.Drawing.Point(62, 101);
+            this.searchComboBoxLabel.Name = "searchComboBoxLabel";
+            this.searchComboBoxLabel.Size = new System.Drawing.Size(99, 13);
+            this.searchComboBoxLabel.TabIndex = 19;
+            this.searchComboBoxLabel.Text = "Search By Material:";
+            // 
+            // searchComboBox
+            // 
+            this.searchComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.searchComboBox.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.searchComboBox.FormattingEnabled = true;
+            this.searchComboBox.Items.AddRange(new object[] {
+            "Oak",
+            "Laminate",
+            "Pine",
+            "Rosewood",
+            "Veneer"});
+            this.searchComboBox.Location = new System.Drawing.Point(167, 98);
+            this.searchComboBox.Name = "searchComboBox";
+            this.searchComboBox.Size = new System.Drawing.Size(171, 21);
+            this.searchComboBox.TabIndex = 20;
+            this.searchComboBox.Text = "Select Material";
+            // 
             // SearchQuotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -128,7 +129,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "SearchQuotes";
             this.Text = "SearchQuotes";
-            this.TransparencyKey = System.Drawing.Color.White;
+            this.TransparencyKey = System.Drawing.Color.IndianRed;
             ((System.ComponentModel.ISupportInitialize)(this.searchGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
