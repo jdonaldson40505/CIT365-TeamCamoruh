@@ -10,8 +10,12 @@
 <h4>Meeting</h4>
 <hr />
 <div class="row">
+    <form asp-page-handler="ChangeSpeakers" method="post">
+    <label for="numSpeakers">Number of Speakers</label>
+    <input type="number" id="numSpeakers" name="numSpeakers" min="0" onchange="this.form.submit();" value="@Model.numSpeakers"  />
+    </form>
     <div class="col-md-4">
-        <form method="post">
+        <form asp-page-handler="AsyncCreate" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Meeting.Date" class="control-label"></label>
@@ -48,17 +52,19 @@
                 <input asp-for="Meeting.ClosingPrayer" class="form-control" />
                 <span asp-validation-for="Meeting.ClosingPrayer" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            @{
+                for(int i = 0; i < Model.numSpeakers; i++)
+                {
+                <div class="form-group">
                 <label asp-for="Speaker.Name" class="control-label"></label>
                 <input asp-for="Speaker.Name" class="form-control" />
                 <span asp-validation-for="Speaker.Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="Speaker.Topic" class="control-label"></label>
                 <input asp-for="Speaker.Topic" class="form-control" />
                 <span asp-validation-for="Speaker.Topic" class="text-danger"></span>
-            </div>
-
+                </div>
+                }
+            }
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

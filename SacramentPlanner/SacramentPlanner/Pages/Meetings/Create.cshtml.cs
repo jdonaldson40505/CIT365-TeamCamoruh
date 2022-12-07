@@ -26,14 +26,16 @@ namespace SacramentPlanner.Pages.Meetings
 
         [BindProperty]
         public Meeting Meeting { get; set; }
+        public List<Speaker> Speakers = new List<Speaker>();
         [BindProperty]
         public Speaker Speaker { get; set; }
+        public int? numSpeakers;
         
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsyncCreate()
         {
-            
+            Console.WriteLine("");
           if (!ModelState.IsValid)
             {
                 return Page();
@@ -44,6 +46,11 @@ namespace SacramentPlanner.Pages.Meetings
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
+        }
+
+        public void OnPostChangeSpeakers(int? numSpeakers)
+        {
+            this.numSpeakers = numSpeakers;
         }
     }
 }
