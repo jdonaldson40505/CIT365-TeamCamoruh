@@ -35,19 +35,35 @@ namespace SacramentPlanner.Pages.Meetings
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsyncCreate()
         {
-            Console.WriteLine("");
           if (!ModelState.IsValid)
             {
                 return Page();
             }
-          Meeting.speakers.Add(Speaker);
+            //foreach(var speaker in ModelState.)
+            var speakerNames = ModelState["Speaker.Name"].AttemptedValue;
+            var speakerTopics = ModelState["Speaker.Topic"].AttemptedValue;
+            if (speakerNames != null && speakerTopics != null)
+            {
+                String[] names = speakerNames.Split(",");
+                String[] topics = speakerTopics.Split(",");
+                for(int i = 0; i < names.Length; i++)
+                {
+                    Speaker speaker = new Speaker();
+                    speaker.Name = names[i];
+                    speaker.Topic = topics[i];
+                    Speakers.Add(speaker);
+                }
+            }
+           
+       
+          Meeting.speakers = Speakers;
             _context.Meeting.Add(Meeting);
             //_context.Speaker.Add(Speaker);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
         }
-
+         
         public void OnPostChangeSpeakers(int? numSpeakers)
         {
             this.numSpeakers = numSpeakers;
