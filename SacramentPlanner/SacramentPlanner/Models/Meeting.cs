@@ -20,6 +20,6 @@ namespace SacramentPlanner.Models
         [Display(Name = "Closing Prayer")]
         public String ClosingPrayer { get; set; }
         [Display(Name = "Speakers")]
-        public List<Speaker> speakers { get; set; }
+        public List<Speaker> speakers { get; set; } = new List<Speaker>();
     }
 }

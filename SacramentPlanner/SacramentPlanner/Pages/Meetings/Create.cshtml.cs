@@ -26,18 +26,21 @@ namespace SacramentPlanner.Pages.Meetings
 
         [BindProperty]
         public Meeting Meeting { get; set; }
+        [BindProperty]
+        public Speaker Speaker { get; set; }
         
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
+            
           if (!ModelState.IsValid)
             {
                 return Page();
             }
-          
-
+          Meeting.speakers.Add(Speaker);
             _context.Meeting.Add(Meeting);
+            //_context.Speaker.Add(Speaker);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
