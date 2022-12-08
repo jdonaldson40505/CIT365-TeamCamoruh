@@ -30,6 +30,7 @@ namespace SacramentPlanner.Pages.Meetings
         [BindProperty]
         public Speaker Speaker { get; set; }
         public int? numSpeakers;
+        public bool success = false;
         
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
@@ -60,7 +61,6 @@ namespace SacramentPlanner.Pages.Meetings
             _context.Meeting.Add(Meeting);
             //_context.Speaker.Add(Speaker);
             await _context.SaveChangesAsync();
-
             return RedirectToPage("./Index");
         }
          
