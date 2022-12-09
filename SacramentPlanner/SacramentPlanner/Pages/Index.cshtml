@@ -5,6 +5,46 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome to the Sacrament Meeting Planner</h1>
+   </div>
+<div id="grid-container">
+    <div id="sacrament">
+        <img src="~/images/sacrament.jpg" alt="temple">
+    </div>
+    <div id="icons">
+        <div>
+            <a asp-area="" asp-controller="Hymn" asp-action="Index"><img src="~/images/hymns.jpg" alt="hymns">
+            <p>Hymns</p></a>
+        </div>
+        <div>
+            <a asp-area="" asp-controller="Sacrament" asp-action="Index">
+                <img src="SacramentPlanner\Images\Sacrament.jpg" alt="sacrament">
+            <p>Sacrament</p></a>
+        </div>
+        <div>
+            <a asp-area="" asp-controller="Member" asp-action="Index">
+                <img src="~/images/members.jpg" alt="members">
+                <p>Members</p>
+            </a>
+        </div>
+        <div>
+            <a asp-area="" asp-controller="Bishopric" asp-action="Index">
+                <img src="~/images/bishopric.jpg" alt="bishopric">
+                <p></p>
+            </a>
+        </div>
+        <div>
+            <a asp-area="" asp-controller="Speaker" asp-action="Index">
+                <img src="~/images/speaker.jpeg" alt="speaker">
+                <p>Speakers</p>
+            </a>
+        </div>
+        <div>
+            <a asp-area="" asp-controller="Topic" asp-action="Index">
+                <img src="~/images/topics.jpg" alt="topics">
+                <p>Topics</p>
+            </a>
+        </div>
+
+    </div>
 </div>
