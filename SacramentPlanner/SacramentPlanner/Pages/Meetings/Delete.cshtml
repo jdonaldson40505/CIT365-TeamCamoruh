@@ -54,7 +54,18 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Meeting.ClosingPrayer)
         </dd>
-    </dl>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Meeting.speakers)
+        </dt>
+        <dd class="col-sm-10">
+            @foreach (var talk in Model.Meeting.speakers)
+            {
+                <p>
+                    @talk.ToString()
+                </p>       
+            }
+        </dd>
+        </dl>
     
     <form method="post">
         <input type="hidden" asp-for="Meeting.Id" />

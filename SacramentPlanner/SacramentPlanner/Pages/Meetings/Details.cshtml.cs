@@ -19,7 +19,7 @@ namespace SacramentPlanner.Pages.Meetings
             _context = context;
         }
 
-      public Meeting Meeting { get; set; }
+        public Meeting Meeting { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,7 +28,10 @@ namespace SacramentPlanner.Pages.Meetings
                 return NotFound();
             }
 
-            var meeting = await _context.Meeting.FirstOrDefaultAsync(m => m.Id == id);
+            var speakers = await this._context.Speaker.ToListAsync();
+
+            var meeting = await this._context.Meeting.FirstOrDefaultAsync(m => m.Id == id);
+
             if (meeting == null)
             {
                 return NotFound();
@@ -39,5 +42,6 @@ namespace SacramentPlanner.Pages.Meetings
             }
             return Page();
         }
+
     }
 }

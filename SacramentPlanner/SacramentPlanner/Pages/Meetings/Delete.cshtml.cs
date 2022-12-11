@@ -29,6 +29,7 @@ namespace SacramentPlanner.Pages.Meetings
                 return NotFound();
             }
 
+            var speakers = await this._context.Speaker.ToListAsync();
             var meeting = await _context.Meeting.FirstOrDefaultAsync(m => m.Id == id);
 
             if (meeting == null)
@@ -48,6 +49,7 @@ namespace SacramentPlanner.Pages.Meetings
             {
                 return NotFound();
             }
+            
             var meeting = await _context.Meeting.FindAsync(id);
 
             if (meeting != null)
