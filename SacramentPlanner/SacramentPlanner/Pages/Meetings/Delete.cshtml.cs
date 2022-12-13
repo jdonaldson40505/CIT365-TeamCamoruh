@@ -49,7 +49,7 @@ namespace SacramentPlanner.Pages.Meetings
             {
                 return NotFound();
             }
-            
+            var speakers = await _context.Speaker.ToListAsync();
             var meeting = await _context.Meeting.FindAsync(id);
 
             if (meeting != null)
