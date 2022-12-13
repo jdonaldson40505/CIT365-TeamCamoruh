@@ -29,6 +29,9 @@
                 @Html.DisplayNameFor(model => model.Meeting[0].IntermediateHymn)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Meeting[0].ClosingHymn)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Meeting[0].OpeningPrayer)
             </th>
             <th>
@@ -55,6 +58,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.IntermediateHymn)
             </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ClosingHymn)
+                </td>
             <td>
                 @Html.DisplayFor(modelItem => item.OpeningPrayer)
             </td>
