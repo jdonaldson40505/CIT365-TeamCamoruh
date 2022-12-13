@@ -56,7 +56,22 @@
                 <input asp-for="Meeting.ClosingPrayer" class="form-control" />
                 <span asp-validation-for="Meeting.ClosingPrayer" class="text-danger"></span>
             </div>
-        </div>
+            <div class="form-group mt-3">
+                    <div class="col">
+                        @{
+                            for (int i = 0; i < Model.numSpeakers; i++)
+                            {
+                                <div class="form-group">
+                                    <label asp-for="Speaker.Name" class="control-label"></label>
+                                    <input asp-for="Speaker.Name" class="form-control" />
+                                    <span asp-validation-for="Speaker.Name" class="text-danger"></span>
+                                    <label asp-for="Speaker.Topic" class="control-label"></label>
+                                    <input asp-for="Speaker.Topic" class="form-control" />
+                                    <span asp-validation-for="Speaker.Topic" class="text-danger"></span>
+                                </div>
+                            }
+                        }
+                    </div>
     </div>
 
     <div class="row justify-content-end">
@@ -67,7 +82,7 @@
         </div>
     </div>
 
-</form>   
+</form>
 </div>
 
 <div>

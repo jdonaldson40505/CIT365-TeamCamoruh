@@ -13,29 +13,29 @@ namespace SacramentPlanner.Models
 
         [Display(Name ="Conducting")]
         [RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$")]
-        public String Conductor { get; set; }
+        public String? Conductor { get; set; }
 
 
         [Required(ErrorMessage = "Opening Hymn is required"), Display(Name = "Opening Hymn")]
-        public String OpeningHymn { get; set; }
+        public String? OpeningHymn { get; set; }
 
 
         [Required(ErrorMessage = "Sacrament Hymn is required"), Display(Name = "Sacrament Hymn")]
-        public String SacramentHymn { get; set; }
+        public String? SacramentHymn { get; set; }
 
 
         [Display(Name = "Intermediate Hymn")]
-        public String IntermediateHymn { get; set; } = string.Empty;
+        public String? IntermediateHymn { get; set; } = string.Empty;
 
 
         [Required(ErrorMessage = "Opening Prayer is required"), Display(Name = "Opening Prayer")]
         [RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$")]
-        public String OpeningPrayer { get; set; }
+        public String? OpeningPrayer { get; set; }
 
 
         [Required(ErrorMessage = "Closing Hymn is required"), Display(Name = "Closing Prayer")]
         [RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$")]
-        public String ClosingPrayer { get; set; }
+        public String? ClosingPrayer { get; set; }
 
 
         [Display(Name = "Speakers")]

@@ -22,6 +22,11 @@ namespace SacramentPlanner.Pages.Meetings
 
         [BindProperty]
         public Meeting Meeting { get; set; } = default!;
+        public List<Speaker> Speakers = new List<Speaker>();
+        [BindProperty]
+        public Speaker Speaker { get; set; }
+        public int? numSpeakers;
+        public bool success = false;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
