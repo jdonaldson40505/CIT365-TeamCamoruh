@@ -26,6 +26,8 @@ namespace SacramentPlanner.Models
 
         [Display(Name = "Intermediate Hymn")]
         public String IntermediateHymn { get; set; } = string.Empty;
+        [Display(Name = "Closing Hymn")]
+        public String ClosingHymn { get; set; }
 
 
         [Required(ErrorMessage = "Opening Prayer is required"), Display(Name = "Opening Prayer")]
