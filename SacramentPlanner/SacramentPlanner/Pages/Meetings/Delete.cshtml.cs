@@ -20,7 +20,7 @@ namespace SacramentPlanner.Pages.Meetings
         }
 
         [BindProperty]
-      public Meeting Meeting { get; set; }
+        public Meeting Meeting { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -51,11 +51,16 @@ namespace SacramentPlanner.Pages.Meetings
             }
             var speakers = await _context.Speaker.ToListAsync();
             var meeting = await _context.Meeting.FindAsync(id);
+            var meeting_speakers = meeting.speakers;
 
             if (meeting != null)
             {
                 Meeting = meeting;
                 _context.Meeting.Remove(Meeting);
+                foreach (Speaker speaker in meeting_speakers)
+                {
+                    _context.Speaker.Remove(speaker);
+                }
                 await _context.SaveChangesAsync();
             }
 
