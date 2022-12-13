@@ -50,6 +50,7 @@ namespace SacramentPlanner.Pages.Meetings
                 return NotFound();
             }
             
+            var speakers = await _context.Speaker.ToListAsync();
             var meeting = await _context.Meeting.FindAsync(id);
             var meeting_speakers = meeting.speakers;
 
@@ -57,7 +58,7 @@ namespace SacramentPlanner.Pages.Meetings
             {
                 Meeting = meeting;
                 _context.Meeting.Remove(Meeting);
-                foreach (Speaker speaker in meeting_speakers)
+                foreach (Speaker speaker in speakers)
                 {
                     _context.Speaker.Remove(speaker);
                 }
