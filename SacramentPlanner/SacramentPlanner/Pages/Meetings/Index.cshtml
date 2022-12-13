@@ -10,6 +10,12 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+<form>
+    <p>
+        Search: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Search" />
+    </p>
+</form>
 <table class="table">
     <thead>
         <tr>
@@ -27,6 +33,9 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Meeting[0].IntermediateHymn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Meeting[0].ClosingHymn)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Meeting[0].OpeningPrayer)
@@ -55,6 +64,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.IntermediateHymn)
             </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ClosingHymn)
+                </td>
             <td>
                 @Html.DisplayFor(modelItem => item.OpeningPrayer)
             </td>

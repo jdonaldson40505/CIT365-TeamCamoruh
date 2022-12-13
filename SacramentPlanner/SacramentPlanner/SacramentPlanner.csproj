@@ -7,6 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\Hymns.jpg" />
+    <Content Remove="wwwroot\member.jpg" />
+    <Content Remove="wwwroot\speaker.jpeg" />
+    <Content Remove="wwwroot\topic.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Bishopric.jpg" />
+    <None Include="wwwroot\Hymns.jpg" />
+    <None Include="wwwroot\member.jpg" />
+    <None Include="wwwroot\speaker.jpeg" />
+    <None Include="wwwroot\topic.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.10">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
