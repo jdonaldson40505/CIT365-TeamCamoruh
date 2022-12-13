@@ -18,6 +18,8 @@ namespace SacramentPlanner.Pages.Meetings
         {
             _context = context;
         }
+        [BindProperty(SupportsGet = true)]
+        public string SearchString { get; set; }
 
         public IList<Meeting> Meeting { get;set; } = default!;
 
