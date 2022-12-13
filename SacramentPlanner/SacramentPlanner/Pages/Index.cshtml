@@ -7,6 +7,10 @@
 @*<div class="text-center">
     <h1 class="display-4">Welcome to the Sacrament Meeting Planner</h1>
    </div>
+<div id="grid-container">
+    <div id="sacrament">
+        <img src="~/monticello.jpeg" alt="temple">
+    </div>
     <div id="icons">*@
         @*<div>
             <a asp-area="" asp-controller="Hymn" asp-action="Index"><img src="~/hymns.jpg" alt="hymns">
@@ -17,8 +21,22 @@
         <img style="max-width:20rem; max-height:20rem;" src="~/sacrament.jpeg" alt="sacrament">
             <p>Sacrament</p></a>
         </div>
-        <div style="max-width:20rem; max-height:20rem;">
+       @* <div style="max-width:20rem; max-height:20rem;">
             <a asp-area="" asp-controller="Member" asp-action="Index">
                 <img style="max-width:20rem; max-height:20rem;" src="~/member.jpg" alt="members">
                 <p>Members</p></a>
+        </div>*@
+  </div>
+<div class="card bg-light mb-3 justify-content-center m-1" >
+    <div class="card-header text-center"><h1>Welcome</h1></div>
+    <div class="card-body text-center">
+        <div class="row">
+            <div class="col">
+                <a class="btn btn-primary btn-lg m-1" asp-page="/Meetings/Create">Create Meeting</a>
+            </div>
+            <div class="col">
+                <a class="btn btn-primary btn-lg m-1" asp-page="/Meetings/Index">View Previous Meetings</a>
+            </div>
         </div>
+    </div>
+</div>
