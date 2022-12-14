@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -35,11 +36,16 @@ namespace SacramentPlanner.Pages.Meetings
                 return NotFound();
             }
 
+
+            var speakers = await this._context.Speaker.ToListAsync();
             var meeting =  await _context.Meeting.FirstOrDefaultAsync(m => m.Id == id);
             if (meeting == null)
             {
                 return NotFound();
             }
+
+            
+
             Meeting = meeting;
             return Page();
         }
@@ -76,7 +82,8 @@ namespace SacramentPlanner.Pages.Meetings
 
         private bool MeetingExists(int id)
         {
-          return _context.Meeting.Any(e => e.Id == id);
+
+            return _context.Meeting.Any(e => e.Id == id);
         }
     }
 }

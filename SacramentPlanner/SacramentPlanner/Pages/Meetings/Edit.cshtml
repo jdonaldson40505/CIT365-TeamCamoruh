@@ -59,10 +59,10 @@
             <div class="form-group mt-3">
                     <div class="col">
                         @{
-                            for (int i = 0; i < Model.numSpeakers; i++)
+                            @foreach (var talk in Model.Meeting.speakers)
                             {
                                 <div class="form-group">
-                                    <label asp-for="Speaker.Name" class="control-label"></label>
+                                    <label asp-for="Speaker" class="control-label"></label>
                                     <input asp-for="Speaker.Name" class="form-control" />
                                     <span asp-validation-for="Speaker.Name" class="text-danger"></span>
                                     <label asp-for="Speaker.Topic" class="control-label"></label>
@@ -72,7 +72,9 @@
                             }
                         }
                     </div>
+            </div>
     </div>
+
 
     <div class="row justify-content-end">
         <div class="btn">
@@ -81,7 +83,7 @@
             </div>
         </div>
     </div>
-
+</div>
 </form>
 </div>
 
