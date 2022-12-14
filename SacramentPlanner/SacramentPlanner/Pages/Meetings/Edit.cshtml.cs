@@ -52,6 +52,8 @@ namespace SacramentPlanner.Pages.Meetings
         // For more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+
+
             if (!ModelState.IsValid)
             {
                 return Page();
