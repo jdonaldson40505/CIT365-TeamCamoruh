@@ -41,7 +41,7 @@ namespace SacramentPlanner.Models
 
 
         [Display(Name = "Speakers")]
-        [RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$")]
-        public List<Speaker> speakers { get; set; } = new List<Speaker>();
+        //[RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$")]
+        public List<Speaker>? speakers { get; set; } = new List<Speaker>();
     }
 }
