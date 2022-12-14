@@ -62,12 +62,12 @@
                             @foreach (var talk in Model.Meeting.speakers)
                             {
                                 <div class="form-group">
-                                    <label asp-for="Speaker" class="control-label"></label>
-                                    <input asp-for="Speaker.Name" class="form-control" />
-                                    <span asp-validation-for="Speaker.Name" class="text-danger"></span>
-                                    <label asp-for="Speaker.Topic" class="control-label"></label>
-                                    <input asp-for="Speaker.Topic" class="form-control" />
-                                    <span asp-validation-for="Speaker.Topic" class="text-danger"></span>
+                                    <label asp-for="@talk" class="control-label"></label>
+                                    <input asp-for="@talk.Name" class="form-control" />
+                                    <span asp-validation-for="@talk.Name" class="text-danger"></span>
+                                    <label asp-for="@talk.Topic" class="control-label"></label>
+                                    <input asp-for="@talk.Topic" class="form-control" />
+                                    <span asp-validation-for="@talk.Topic" class="text-danger"></span>
                                 </div>
                             }
                         }
