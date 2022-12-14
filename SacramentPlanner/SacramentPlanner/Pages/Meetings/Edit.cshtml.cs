@@ -44,8 +44,6 @@ namespace SacramentPlanner.Pages.Meetings
                 return NotFound();
             }
 
-            
-
             Meeting = meeting;
             return Page();
         }
@@ -59,6 +57,22 @@ namespace SacramentPlanner.Pages.Meetings
                 return Page();
             }
 
+            var speakerNames = ModelState["Speaker.Name"].AttemptedValue;
+            var speakerTopics = ModelState["Speaker.Topic"].AttemptedValue;
+            if (speakerNames != null && speakerTopics != null)
+            {
+                String[] names = speakerNames.Split(",");
+                String[] topics = speakerTopics.Split(",");
+                for (int i = 0; i < names.Length; i++)
+                {
+                    Speaker speaker = new Speaker();
+                    speaker.Name = names[i];
+                    speaker.Topic = topics[i];
+                    Speakers.Add(speaker);
+                }
+            }
+
+            Meeting.speakers = Speakers;
             _context.Attach(Meeting).State = EntityState.Modified;
 
             try
