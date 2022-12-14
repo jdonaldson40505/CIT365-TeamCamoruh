@@ -25,7 +25,7 @@ namespace SacramentPlanner.Models
 
 
         [Display(Name = "Intermediate Hymn")]
-        public String IntermediateHymn { get; set; } = string.Empty;
+        public String? IntermediateHymn { get; set; } = string.Empty;
         [Display(Name = "Closing Hymn")]
         public String ClosingHymn { get; set; }
 
