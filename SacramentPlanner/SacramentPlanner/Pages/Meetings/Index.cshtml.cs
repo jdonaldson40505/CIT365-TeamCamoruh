@@ -27,10 +27,20 @@ namespace SacramentPlanner.Pages.Meetings
 
         public async Task OnGetAsync()
         {
-            if (_context.Meeting != null)
+            var meetings = from m in _context.Meeting
+                         select m;
+            if (!string.IsNullOrEmpty(SearchString))
             {
-                Meeting = await _context.Meeting.ToListAsync();
+                meetings = meetings.Where(s => s.Conductor.Contains(SearchString));
+                    //meetings.Where(s => s.Title.Contains(SearchString));
             }
+            meetings = meetings.OrderBy(o => o.Date);
+            Meeting = await meetings.ToListAsync();
+        }
+            //if (_context.Meeting != null)
+            //{
+            //    Meeting = await _context.Meeting.ToListAsync();
+            //}
         }
     }
-}
+
